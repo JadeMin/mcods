@@ -53,7 +53,7 @@ then MCod will use options from `server.properties` or default.
 
 
 
-## Advanced Usage
+# Advanced Usage
 Run `mcods --help` to see all available commands.
 
 ## Config IP and port of MCods
