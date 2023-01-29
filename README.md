@@ -5,7 +5,7 @@ Still in development, so there may be bugs.
 
 
 # Installation
-1. Download [mcods.exe](./releases/latest/download/mcods.exe) from the [latest release](./releases/latest).
+1. Download [mcods.exe](https://github.com/JadeMin/MCods/releases/latest/download/mcods.exe) from the [latest release](https://github.com/JadeMin/MCods/releases/latest).
 2. Move `mcods.exe` to `%UserProfile%/.mcods/` and add it to PATH.
 3. Open editor `run.bat` in your server.
 
