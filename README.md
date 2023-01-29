@@ -1,5 +1,5 @@
 # MCods
-### Allows all players to download mods from your Forge server folder.
+### Allow all players to download mods in your Forge server folder.
 Still in development, so there may be bugs.
 
 
