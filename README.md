@@ -44,7 +44,7 @@ You can just open `run.bat`.
 then MCod will use options from `server.properties` or default.
 
 ## Or it has a different name or directory
-1. Open editor `run.bat` in your server.
+1. Open editor `run.bat`.
 2. Edit the `mcods` command like:
 ```diff
 - mcods
