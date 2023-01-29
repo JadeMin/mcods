@@ -48,8 +48,8 @@ start mcods
 Run `mcods --help` to see all available commands.
 
 ## Config IP and port of MCods
-### These options are NOT REQUIRED!
-### MCods defaults to the options below if not specified.
+These options are NOT REQUIRED!  
+MCods defaults to the options below if not specified.
 ```diff
 (...)
 rcon.port=25575
