@@ -38,12 +38,10 @@ start mcods
 
 
 # Usage
-
-## If the `mods` folder is in the same directory as `run.bat`
 You can just open `run.bat`.  
-then MCod will use options from `server.properties` or default.
+Then MCod will use default options and default `mods` directory.
 
-## Or it has a different name or directory
+## If the `mods` folder it has a different name or directory
 1. Open editor `run.bat`.
 2. Edit the `mcods` command like:
 ```diff
