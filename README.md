@@ -1,5 +1,5 @@
 # MCods
-### Allows your friends to easily download same mods from your Minecraft server.
+### Allows your friends to easily install same mods as your Minecraft server.
 Still in development, so there may be bugs.
 
 
