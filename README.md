@@ -1,5 +1,5 @@
 # MCods
-### A lightweight real-time web server that allows all to download mods from your Forge server.
+### Allows all players to download mods from your Forge server folder.
 Still in development, so there may be bugs.
 
 
