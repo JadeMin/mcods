@@ -43,7 +43,7 @@ start mcods
 You can just open `run.bat`.  
 then MCod will use options from `server.properties` or default.
 
-## If the `mods` folder has a different name or path
+## Or it has a different name or path
 1. Open `run.bat` in your server folder.
 2. Edit the `mcods` command like:
 ```diff
