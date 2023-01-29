@@ -5,14 +5,8 @@ Still in development, so there may be bugs.
 
 
 # Installation
-
-## Windows 10 / 11
 1. Download [mcods.exe](https://github.com/JadeMin/mcods/releases/latest/download/mcods.exe) from the [latest release](https://github.com/JadeMin/MCods/releases/latest).
-3. Move `mcods.exe` to `%UserProfile%/.mcods/` and add it to PATH.
-
-
-
-# Usage
+2. Move `mcods.exe` to `%UserProfile%/.mcods/` and add it to PATH.
 
 ## Windows 11
 1. Open editor `run.bat` in your server.
