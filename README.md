@@ -1,12 +1,13 @@
 # MCods
-MCods is a simple, lightweight web server that serve "mods" folder of your server.
+MCods is a simple and lightweight web server that serve mods of your Minecraft server.
+### Still in development, so there may be bugs.
 
 
 
 # Installation
 
 ## Windows 10 / 11
-1. Download the latest release from [here](https://github.com/JadeMin/mcods/releases/latest/download/mcods.exe).
+1. Download the [latest release](https://github.com/JadeMin/mcods/releases/latest/download/mcods.exe).
 2. Extract the zip file.
 3. Move `mcods.exe` to `%UserProfile%/.mcods/` and add it to PATH.
 
