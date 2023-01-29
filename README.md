@@ -25,7 +25,7 @@ java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_
 ```diff
 wt mcods
 - java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
-+ wt java (...)
++ wt java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
 ```
 
 ## Windows 10
@@ -39,7 +39,7 @@ java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_
 ```diff
 start mcods
 - java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
-+ start java (...)
++ start java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
 ```
 
 
