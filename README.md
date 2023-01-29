@@ -38,7 +38,7 @@ start mcods
 
 
 # Usage
-Just open `run.bat` then MCod will uses default options and default `mods` folder path.
+Just open `run.bat` then MCods will use default configs and start the web server.
 
 ## If the `mods` folder has a different name or path
 1. Open editor `run.bat`.
