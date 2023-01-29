@@ -47,8 +47,9 @@ start mcods
 # Advanced Usage
 Run `mcods --help` to see all available commands.
 
-## Set ip and port of MCods
-Edit `server.properties` like:
+## Config IP and port of MCods
+### These options are NOT REQUIRED!
+### MCods defaults to the options below if not specified.
 ```diff
 (...)
 rcon.port=25575
@@ -59,7 +60,6 @@ resource-pack-sha1=
 server-ip=<Your server ip>
 server-port=25565
 
-# OPTIONS ARE NOT REQUIRED so MCods will use these as default
 + mcods-ip=<Same as server-ip>
 + mcods-port=25585
 
