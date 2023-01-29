@@ -6,7 +6,7 @@ MCods is a simple, lightweight web server that serve "mods" folder of your serve
 # Installation
 
 ## Windows 10 / 11
-1. Download the latest release from [here]().
+1. Download the latest release from [here](https://github.com/JadeMin/mcods/releases/latest).
 2. Extract the zip file.
 3. Move `mcods.exe` to `%UserProfile%/.mcods/` and add it to PATH.
 
