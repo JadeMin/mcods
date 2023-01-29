@@ -53,7 +53,7 @@ start mcods
 
 
 # Advanced Usage
-Run `mcods --help` to see all available commands.
+<!--Run `mcods --help` to see all available commands.-->
 
 ## Config IP and port of MCods
 These options are NOT REQUIRED!  
