@@ -1,5 +1,5 @@
 # MCods
-### MCods is a lightweight real-time web server allows all to download mods from your server.
+### A lightweight real-time web server allows all to download mods from your Forge server.
 Still in development, so there may be bugs.
 
 
