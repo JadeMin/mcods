@@ -38,7 +38,9 @@ start mcods
 
 
 # Usage
-Just open `run.bat` then MCods will use default configs and start the web server.
+1. Just open `run.bat` then MCods will use default configs and start the web server.
+2. Let your friends open `http://<IP>:<Port>` in the browser.
+3. Click mod file names to download.
 
 ## If the `mods` folder has a different name or path
 1. Open editor `run.bat`.
