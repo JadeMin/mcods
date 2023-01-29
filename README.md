@@ -38,10 +38,9 @@ start mcods
 
 
 # Usage
-You can just open `run.bat`.  
-Then MCod will use default options and default `mods` directory.
+Just open `run.bat` then MCod will uses default options and default `mods` folder path.
 
-## If the `mods` folder has a different name or directory
+## If the `mods` folder has a different name or path
 1. Open editor `run.bat`.
 2. Edit the `mcods` command like:
 ```diff
