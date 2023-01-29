@@ -15,7 +15,7 @@ Still in development, so there may be bugs.
 # Usage
 
 ## Windows 11
-1. Open editor `run.bat` of your server.
+1. Open editor `run.bat` in your server.
 2. Add a new line `wt mcods` before `java` command like:
 ```diff
 + wt mcods
@@ -29,7 +29,7 @@ wt mcods
 ```
 
 ## Windows 10
-1. Open editor `run.bat` of your server.
+1. Open editor `run.bat` in your server.
 2. Add a new line `start mcods` before `java` command like:
 ```diff
 + start mcods
