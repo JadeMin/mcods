@@ -40,7 +40,8 @@ start mcods
 # Usage
 
 ## If the `mods` folder is in the same folder as `run.bat`
-You can just open `run.bat`. then MCod will use options from `server.properties` or default.
+You can just open `run.bat`.  
+then MCod will use options from `server.properties` or default.
 
 ## If the `mods` folder has a different name or path
 1. Open `run.bat` in your server folder.
