@@ -28,7 +28,7 @@ wt mcods
 + start mcods
 java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
 ```
-5. Add `wt` before the `java` command like:
+5. Add `start` before the `java` command like:
 ```diff
 start mcods
 - java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
