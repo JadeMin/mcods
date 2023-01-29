@@ -7,9 +7,9 @@ Still in development, so there may be bugs.
 # Installation
 1. Download [mcods.exe](https://github.com/JadeMin/mcods/releases/latest/download/mcods.exe) from the [latest release](https://github.com/JadeMin/MCods/releases/latest).
 2. Move `mcods.exe` to `%UserProfile%/.mcods/` and add it to PATH.
+3. Open editor `run.bat` in your server.
 
 ## Windows 11
-3. Open editor `run.bat` in your server.
 4. Add a new line `wt mcods` before `java` command like:
 ```diff
 + wt mcods
@@ -23,7 +23,6 @@ wt mcods
 ```
 
 ## Windows 10
-3. Open editor `run.bat` in your server.
 4. Add a new line `start mcods` before `java` command like:
 ```diff
 + start mcods
