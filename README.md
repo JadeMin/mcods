@@ -9,13 +9,13 @@ Still in development, so there may be bugs.
 2. Move `mcods.exe` to `%UserProfile%/.mcods/` and add it to PATH.
 
 ## Windows 11
-1. Open editor `run.bat` in your server.
-2. Add a new line `wt mcods` before `java` command like:
+3. Open editor `run.bat` in your server.
+4. Add a new line `wt mcods` before `java` command like:
 ```diff
 + wt mcods
 java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
 ```
-3. Add `wt` before `java` command like:
+5. Add `wt` before `java` command like:
 ```diff
 wt mcods
 - java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
@@ -23,13 +23,13 @@ wt mcods
 ```
 
 ## Windows 10
-1. Open editor `run.bat` in your server.
-2. Add a new line `start mcods` before `java` command like:
+3. Open editor `run.bat` in your server.
+4. Add a new line `start mcods` before `java` command like:
 ```diff
 + start mcods
 java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
 ```
-3. Add `wt` before `java` command like:
+5. Add `wt` before `java` command like:
 ```diff
 start mcods
 - java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
