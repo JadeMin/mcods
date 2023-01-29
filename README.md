@@ -1,5 +1,5 @@
 # MCods
-MCods is a simple and lightweight web server that serves "mods" of your Minecraft server.
+MCods is a simple, lightweight web server that serve the mod files of your Minecraft server in real time.
 ### Still in development, so there may be bugs.
 
 
