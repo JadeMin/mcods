@@ -1,5 +1,5 @@
 # MCods
-### Allows your friends to share mods from your Minecraft server folder.
+### Allows your friends to easily download the same mod files from your Minecraft server folder.
 Still in development, so there may be bugs.
 
 
