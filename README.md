@@ -39,7 +39,7 @@ start mcods
 
 # Usage
 
-## If the `mods` folder is in the same folder as `run.bat`
+## If the `mods` folder is in the same as `run.bat`
 You can just open `run.bat`.  
 then MCod will use options from `server.properties` or default.
 
