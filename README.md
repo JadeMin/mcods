@@ -49,8 +49,8 @@ Run `mcods --help` to see all available commands.
 
 ## Config IP and port of MCods
 These options are NOT REQUIRED!  
-MCods defaults to the options below if not specified.  
-`server.properties`:
+MCods defaults to the options below if not specified.
+### `server.properties`:
 ```properties
 (...)
 mcods-ip=<Same as server-ip>
