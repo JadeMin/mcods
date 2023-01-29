@@ -13,13 +13,13 @@ Still in development, so there may be bugs.
 4. Add a new line `wt -w 1 mcods` before the `java` command like:
 ```diff
 java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
-+ wt mcods
++ wt -w 1 mcods
 ```
 5. Add `wt -w 1` before the `java` command like:
 ```diff
 - java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
 + wt -w 1 java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
-wt mcods
+wt -w 1 mcods
 ```
 
 ## Windows 10
