@@ -49,22 +49,11 @@ Run `mcods --help` to see all available commands.
 
 ## Config IP and port of MCods
 These options are NOT REQUIRED!  
-MCods defaults to the options below if not specified.
-```diff
+MCods defaults to the options below if not specified.  
+`server.properties`:
+```properties
 (...)
-rcon.port=25575
-require-resource-pack=false
-resource-pack=
-resource-pack-prompt=
-resource-pack-sha1=
-server-ip=<Your server ip>
-server-port=25565
-
-+ mcods-ip=<Same as server-ip>
-+ mcods-port=25585
-
-simulation-distance=10
-spawn-animals=true
-spawn-monsters=true
+mcods-ip=<Same as server-ip>
+mcods-port=25585
 (...)
 ```
