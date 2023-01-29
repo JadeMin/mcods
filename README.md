@@ -1,5 +1,5 @@
 # MCods
-MCods is a lightweight real-time web server allows all to download mods from your server folder.
+MCods is a lightweight real-time web server allows all to download mods from your server.
 ### Still in development, so there may be bugs.
 
 
