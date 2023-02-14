@@ -38,7 +38,7 @@ start mcods
 
 
 # Usage
-1. Just open `run.bat` then MCods will use default configs and start the web server.
+1. Just open `run.bat` then MCods will use default options and start the web server.
 2. Let your friends open `http://<Your Minecraft server ip>:25585` in the browser.
 3. Click mod file names to download.
 
