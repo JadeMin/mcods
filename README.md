@@ -10,7 +10,7 @@ Still in development, so there may be bugs.
 3. Open editor `run.bat` in your server.
 
 ## Windows 11
-4. Add a new line `wt -w 1 mcods` before the `java` command like:
+4. Add a new line `wt -w 1 mcods` after the `java` command like:
 ```diff
 java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
 + wt -w 1 mcods
@@ -23,7 +23,7 @@ wt -w 1 mcods
 ```
 
 ## Windows 10
-4. Add a new line `start mcods` before the `java` command like:
+4. Add a new line `start mcods` after the `java` command like:
 ```diff
 java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
 + start mcods
