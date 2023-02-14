@@ -34,6 +34,14 @@ parser.add_argument(
 	help="Mods folder path of your Forge server"
 )
 parser.add_argument(
+	"-rt",
+	"--realtime",
+	type=bool,
+	action=argparse.BooleanOptionalAction,
+	default=False,
+	help="Updates in real time"
+)
+parser.add_argument(
 	"--debug",
 	type=bool,
 	action=argparse.BooleanOptionalAction,

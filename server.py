@@ -7,16 +7,22 @@ app: Flask = Flask(__name__,
 	static_folder="public/static/",
 	template_folder="public/templates/"
 )
+mod_files: list[str] = []
+def init_mods() -> list[str]:
+	global mod_files
+	mod_files = [
+		filename
+		for filename
+		in os.listdir(args.mods_path)
+			if os.path.isfile(f"{args.mods_path}/{filename}")
+	]
+init_mods()
 
 
 @app.get('/')
 def main() -> Flask.response_class:
-	return render_template("list.html", files=[
-		filename
-			for filename
-			in os.listdir(args.mods_path)
-				if os.path.isfile(f"{args.mods_path}/{filename}")
-	])
+	if args.realtime: init_mods()
+	return render_template("main.html", files=mod_files)
 
 @app.get('/mods/<filename>')
 def download(filename: str) -> Flask.response_class:
