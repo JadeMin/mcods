@@ -25,14 +25,14 @@ wt -w 1 mcods
 ## Windows 10
 4. Add a new line `start mcods` after the `java` command like:
 ```diff
-java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
 + start mcods
+java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
 ```
 5. Add `start` before the `java` command like:
 ```diff
+start mcods
 - java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
 + start java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
-start mcods
 ```
 
 
