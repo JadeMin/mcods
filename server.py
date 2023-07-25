@@ -8,7 +8,7 @@ app: Flask = Flask(__name__,
 	template_folder="public/templates/"
 )
 mod_files: list[str] = []
-def init_mods() -> list[str]:
+def init_mods() -> None:
 	global mod_files
 	mod_files = [
 		filename
@@ -20,12 +20,12 @@ init_mods()
 
 
 @app.get('/')
-def main() -> Flask.response_class:
+def main():
 	if args.realtime: init_mods()
 	return render_template("main.html", files=mod_files)
 
 @app.get('/mods/<filename>')
-def download(filename: str) -> Flask.response_class:
+def download(filename: str):
 	if filename not in os.listdir(args.mods_path):
 		return {"error": "File Not Found"}, 404
 	else:
