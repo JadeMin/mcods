@@ -1,5 +1,5 @@
 # MCods
-### Allows your friends to easily install same mods as your Minecraft server.
+### Share your Minecraft server mod files (.jar) for your friends in realtime!
 Still in development, so there may be bugs.
 
 
