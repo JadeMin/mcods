@@ -1,20 +1,23 @@
-FUNCTION Build {
+FUNCTION BUILD {
 	PARAM (
-		[PARAMETER(Mandatory=$true, Position=0, HelpMessage="Architecture type")]
-		[STRING]$ARCHTYPE
+		[PARAMETER(Mandatory=$true, Position=0, HelpMessage="OS type")] [STRING]$OS,
+		[PARAMETER(Mandatory=$true, Position=1, HelpMessage="Arch type")] [STRING]$ARCH
 	)
 
-	go build -ldflags="-s -w" -o="bin/mcods-$ARCHTYPE"
+	$OUTPATH = "bin/mcods-$OS-$ARCH"
+	IF ($OS -eq "windows") {
+		$OUTPATH = "$OUTPATH.exe"
+	}
+
+	$ENV:GOOS = $OS
+	$ENV:GOARCH = $ARCH
+	go build -ldflags="-s -w" -o="$OUTPATH"
 }
 
 
-$ENV:GOOS = "linux"
-$ENV:GOARCH = "amd64"
-Build "linux-amd64"
 
-$ENV:GOOS = "windows"
-$ENV:GOARCH = "amd64"
-Build "windows-amd64.exe"
+BUILD "linux" "386"
+BUILD "linux" "amd64"
 
-$ENV:GOOS = "windows"
-$ENV:GOARCH = "amd64"
+BUILD "windows" "386"
+BUILD "windows" "amd64"
