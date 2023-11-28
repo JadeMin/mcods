@@ -1,10 +1,10 @@
 FUNCTION Build {
 	PARAM (
-		[Parameter(Mandatory=$true, Position=0, HelpMessage="Build file name")]
-		[string]$filename
+		[PARAMETER(Mandatory=$true, Position=0, HelpMessage="Architecture type")]
+		[STRING]$ARCHTYPE
 	)
 
-	go build -ldflags="-s -w" -o="bin/mcods-$filename"
+	go build -ldflags="-s -w" -o="bin/mcods-$ARCHTYPE"
 }
 
 
