@@ -1,11 +1,11 @@
 FUNCTION BUILD {
 	PARAM (
-		[PARAMETER(Mandatory=$true, Position=0, HelpMessage="OS type")] [STRING]$OS,
-		[PARAMETER(Mandatory=$true, Position=1, HelpMessage="Arch type")] [STRING]$ARCH
+		[PARAMETER(Mandatory=$TRUE, Position=0, HelpMessage="OS type")] [STRING]$OS,
+		[PARAMETER(Mandatory=$TRUE, Position=1, HelpMessage="Arch type")] [STRING]$ARCH
 	)
 
 	$OUTPATH = "bin/mcods-$OS-$ARCH"
-	IF ($OS -eq "windows") {
+	IF ($OS -EQ "windows") {
 		$OUTPATH = "$OUTPATH.exe"
 	}
 
