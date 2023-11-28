@@ -1,24 +1,31 @@
 # MCods
-### Share your Minecraft server mod files (.jar) for your friends in realtime!
-Still in development, so there may be bugs.
+### Share your Minecraft server mod files (.jar) simply!
+Still in development, there may be bugs.
 
 
 
 # Installation
-1. Download [mcods.exe](https://github.com/JadeMin/MCods/releases/latest/download/mcods.exe) from the [latest release](https://github.com/JadeMin/MCods/releases/latest).
-2. Move `mcods.exe` to `%UserProfile%/.mcods/` and add it to PATH.
+1. Download from the [latest release](https://github.com/JadeMin/MCods/releases/latest).
+2. Put it in the same folder as your Minecraft server.
 3. Open editor `run.bat` in your server.
+
+## Linux
+4. Add a new line `./mcods` after the `java` command like:
+```diff
+java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/linux_args.txt %*
++ ./mcods
+```
 
 ## Windows 11
 4. Add a new line `wt -w 1 mcods` after the `java` command like:
 ```diff
-java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
+java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/win_args.txt %*
 + wt -w 1 mcods
 ```
-5. Add `wt -w 1` before the `java` command like:
+5. Add `wt -w 1` in the `java` command like:
 ```diff
-- java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
-+ wt -w 1 java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
+- java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/win_args.txt %*
++ wt -w 1 java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/win_args.txt %*
 wt -w 1 mcods
 ```
 
@@ -26,22 +33,23 @@ wt -w 1 mcods
 4. Add a new line `start mcods` after the `java` command like:
 ```diff
 + start mcods
-java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
+java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/win_args.txt %*
 ```
-5. Add `start` before the `java` command like:
+5. Add `start` in the `java` command like:
 ```diff
 start mcods
-- java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
-+ start java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<Forge-Version>/win_args.txt %*
+- java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/win_args.txt %*
++ start java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/win_args.txt %*
 ```
 
 
 
 # Usage
-1. Just open `run.bat` then MCods will use default options and start the web server.
-2. Let your friends open `http://<Your Minecraft server ip>:25585` in the browser.
-3. Click mod files to download.
+1. Open the `run` file (which is the server launcher), MCods will be started automatically.
+2. Share `http://<Your Minecraft server IP>:3000` to your friends.
+3. Click the `.jar` files to download.
 
+<!--
 ## If the `mods` folder has a different name or path
 1. Open editor `run.bat`.
 2. Edit the `mcods` command like:
@@ -53,7 +61,7 @@ start mcods
 
 
 # Advanced Usage
-<!--Run `mcods --help` to see all available commands.-->
+Run `mcods --help` to see all available commands.
 
 ## Config IP and port of MCods
 These options are NOT REQUIRED!  
@@ -65,3 +73,4 @@ mcods-ip=<Same as server-ip>
 mcods-port=25585
 (...)
 ```
+-->
