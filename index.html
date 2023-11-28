@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+		<!-- Bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" type="text/javascript" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+		<!-- Bootstrap -->
+
+		<!-- HTMX -->
+		<script src="https://unpkg.com/htmx.org@1.9.9" integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX" crossorigin="anonymous"></script>
+		<!-- HTMX -->
+		
+		<title>Required Mods</title>
+	</head>
+
+	<body>
+		<main class="container">
+			<article class="row justify-content-md-center text-center">
+				<header id="top">
+					<h1>Required Mods</h1>
+				</header>
+				<p>
+					<input
+						type="button"
+						value="Download all"
+						class="btn btn-primary col-md-auto"
+						hx-on="click: downloadAll();"
+					/>
+				</p>
+				<p>
+					<ul
+						class="list-group col-md-auto"
+						hx-get="/list"
+						hx-trigger="load"
+					></ul>
+				</p>
+			</article>
+			<footer id="bottom" class="container">
+				<hr/>
+				<p class="text-small text-muted text-end">
+					Powered by <a href="https://github.com/JadeMin/mcods">MCods</a>, @JadeMin
+				</p>
+			</footer>
+		</main>
+
+		<script>
+			function downloadAll() {
+				const items = document.querySelectorAll("#mid a.list-group-item");
+
+				for(const item of items) {
+					item.click();
+				}
+			}
+		</script>
+	</body>
+</html>
