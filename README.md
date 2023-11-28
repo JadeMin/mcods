@@ -7,7 +7,7 @@ Still in development, there may be bugs.
 # Installation
 1. Download from the [latest release](https://github.com/JadeMin/MCods/releases/latest).
 2. Put it in the same folder as your Minecraft server.
-3. Open editor `run.bat` in your server.
+3. Edit the `run` file (which is the server launcher).
 
 ## Linux
 4. Add a new line `./mcods` after the `java` command like:
