@@ -6,7 +6,7 @@ Still in development, so there may be bugs.
 
 # Installation
 1. Download [mcods.exe](https://github.com/JadeMin/MCods/releases/latest/download/mcods.exe) from the [latest release](https://github.com/JadeMin/MCods/releases/latest).
-2. Move `mcods.exe` to `%UserProfile%/.mcods/` and add it to PATH.
+2. Put it in the same folder as your Minecraft server.
 3. Open editor `run.bat` in your server.
 
 ## Windows 11
@@ -38,8 +38,8 @@ start mcods
 
 
 # Usage
-1. Just open `run.bat` then MCods will use default options and start the web server.
-2. Let your friends open `http://<Your Minecraft server ip>:25585` in the browser.
+1. Open `run.bat` then MCods will be automatically started.
+2. Tell your friends to open `http://<Your Minecraft server IP>:25585`.
 3. Click mod files to download.
 
 ## If the `mods` folder has a different name or path
