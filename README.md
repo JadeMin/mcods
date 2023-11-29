@@ -5,7 +5,7 @@ Still in development, there may be bugs.
 
 
 # Installation
-1. Download from the [latest release](https://github.com/JadeMin/MCods/releases/latest).
+1. [Download from the latest release](https://github.com/JadeMin/MCods/releases/latest).
 2. Put it in the same folder as your Minecraft server.
 3. Edit the `run` file (which is the server launcher).
 
