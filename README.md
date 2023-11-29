@@ -17,27 +17,27 @@ java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/linux_args
 ```
 
 ## Windows 11
-4. Add a new line `wt -w 1 mcods` after the `java` command like:
+4. Add a new line `wt -w 1 ./mcods` after the `java` command like:
 ```diff
 java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/win_args.txt %*
-+ wt -w 1 mcods
++ wt -w 1 ./mcods
 ```
 5. Add `wt -w 1` in the `java` command like:
 ```diff
 - java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/win_args.txt %*
 + wt -w 1 java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/win_args.txt %*
-wt -w 1 mcods
+wt -w 1 ./mcods
 ```
 
 ## Windows 10
-4. Add a new line `start mcods` after the `java` command like:
+4. Add a new line `start ./mcods` after the `java` command like:
 ```diff
-+ start mcods
++ start ./mcods
 java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/win_args.txt %*
 ```
 5. Add `start` in the `java` command like:
 ```diff
-start mcods
+start ./mcods
 - java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/win_args.txt %*
 + start java @user_jvm_args.txt @libraries/net/minecraftforge/forge/<version>/win_args.txt %*
 ```
