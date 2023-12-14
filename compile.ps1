@@ -4,17 +4,19 @@ FUNCTION BUILD {
 		[PARAMETER(Mandatory=$TRUE, Position=1, HelpMessage="Arch type")] [STRING]$ARCH
 	)
 
-	$OUTPATH = "bin/mcods-$OS-$ARCH"
+	$OUTPATH = "bin/$PROJECT_NAME-$OS-$ARCH"
 	IF ($OS -EQ "windows") {
 		$OUTPATH = "$OUTPATH.exe"
 	}
 
 	$ENV:GOOS = $OS
 	$ENV:GOARCH = $ARCH
-	go build -ldflags="-s -w" -o="$OUTPATH"
+	go build -trimpath -ldflags="-s -w" -o="$OUTPATH"
 }
 
 
+
+$PROJECT_NAME = "mcods"
 
 BUILD "linux" "386"
 BUILD "linux" "amd64"
