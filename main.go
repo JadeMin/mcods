@@ -14,7 +14,7 @@ const (
 )
 var (
 	//go:embed index.html
-	page string
+	page []byte
 
 	app *fiber.App = fiber.New()
 )
@@ -49,7 +49,7 @@ func main() {
 
 	app.Get("/", func(c *fiber.Ctx) error {
 		c.Set("Content-Type", "text/html")
-		return c.SendString(page)
+		return c.Send(page)
 	})
 
 	app.Get("/list", func(c *fiber.Ctx) error {
