@@ -1,7 +1,7 @@
 FUNCTION BUILD {
 	PARAM (
 		[PARAMETER(Mandatory=$TRUE, Position=0, HelpMessage="OS type")] [STRING]$OS,
-		[PARAMETER(Mandatory=$TRUE, Position=1, HelpMessage="Arch type")] [STRING]$ARCH
+		[PARAMETER(Mandatory=$TRUE, Position=1, HelpMessage="Architecture type")] [STRING]$ARCH
 	)
 
 	$OUTPATH = "bin/$PROJECT_NAME-$OS-$ARCH"
