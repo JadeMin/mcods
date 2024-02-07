@@ -19,7 +19,7 @@ var (
 	app *fiber.App = fiber.New()
 )
 
-func GetList() []string {
+func getList() []string {
 	result := []string{}
 
 	files, err := os.ReadDir(PATH)
@@ -39,7 +39,7 @@ func GetList() []string {
 
 
 func main() {
-	files := GetList()
+	files := getList()
 
 	app.Static("/download", PATH, fiber.Static{
 		Compress: true,
