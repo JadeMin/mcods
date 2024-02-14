@@ -45,9 +45,9 @@ start ./mcods
 
 
 # Usage
-1. Open the `run` file (which is the server launcher), MCods will be started automatically.
+1. Launch the `run` file.
 2. Share `http://<Your Minecraft server IP>:3000` to your friends.
-3. Click the `.jar` files to download.
+3. Let them click the `.jar` files to download.
 
 <!--
 ## If the `mods` folder has a different name or path
