@@ -4,14 +4,16 @@ FUNCTION BUILD {
 		[PARAMETER(Mandatory=$TRUE, Position=1, HelpMessage="Architecture type")] [STRING]$ARCH
 	)
 
-	$OUTPATH = "bin/$PROJECT_NAME-$OS-$ARCH"
+	$FILENAME = "$PROJECT_NAME-$OS-$ARCH"
 	IF ($OS -EQ "windows") {
-		$OUTPATH = "$OUTPATH.exe"
+		$FILENAME = "$FILENAME.exe"
 	}
 
 	$ENV:GOOS = $OS
 	$ENV:GOARCH = $ARCH
-	go build -gcflags=all="-l -B" -ldflags="-s -w" -trimpath -o="$OUTPATH"
+	go build -gcflags=all="-l -B" -ldflags="-s -w" -trimpath -o="bin/$FILENAME"
+
+	ECHO "$FILENAME ... DONE"
 }
 
 
