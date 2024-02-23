@@ -3,68 +3,35 @@ package main
 import (
 	_ "embed"
 	fmt "fmt"
-	os "os"
 	fiber "github.com/gofiber/fiber/v2"
 )
 
+import (
+	router "mcods/router"
+)
+
 const (
-	HOST string = ""
-	PORT string = ":3000"
-	PATH string = "./mods"
+	HOST string = "127.0.0.1"
+	PORT string = "3000"
 )
 var (
-	//go:embed index.html
-	page []byte
-
-	app *fiber.App = fiber.New()
+	app *fiber.App = fiber.New(fiber.Config{
+		Immutable: false,
+		DisableStartupMessage: true,
+	})
 )
-
-func getList() []string {
-	result := []string{}
-
-	files, err := os.ReadDir(PATH)
-	if err != nil {
-		panic(err)
-	}
-
-	for _, file := range files {
-		if file.Type().IsRegular() {
-			result = append(result, file.Name())
-		}
-	}
-
-	return result
-}
 
 
 
 func main() {
-	files := getList()
-
-	app.Static("/download", PATH, fiber.Static{
-		Compress: true,
-		ByteRange: true,
-		Browse: false,
-	})
-
-	app.Get("/", func(c *fiber.Ctx) error {
-		c.Set("Content-Type", "text/html")
-		return c.Send(page)
-	})
-
-	app.Get("/list", func(c *fiber.Ctx) error {
-		result := ""
-
-		for _, files := range files {
-			result += fmt.Sprintf(
-				"<a href=\"/download/%s\" class=\"list-group-item list-group-item-dark\" download>%s</a>",
-				files, files,
-			)
-		}
-
-		return c.SendString(result)
-	})
+	hostname := fmt.Sprintf(
+		"%s:%s",
+		HOST, PORT,
+	)
 
 
-	app.Listen(PORT)
+	app.Route("", router.Route)
+
+	fmt.Printf("MCods is running on http://%s\n", hostname)
+	app.Listen(fmt.Sprintf(hostname))
 }
