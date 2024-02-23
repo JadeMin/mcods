@@ -1,27 +1,34 @@
-FUNCTION BUILD {
-	PARAM (
-		[PARAMETER(Mandatory=$TRUE, Position=0, HelpMessage="OS type")] [STRING]$OS,
-		[PARAMETER(Mandatory=$TRUE, Position=1, HelpMessage="Architecture type")] [STRING]$ARCH
-	)
+FUNCTION BUILD($CONFIG) {
+	WRITE-HOST "Downloading dependencies..."
+	go get -d
+	WRITE-HOST "DONE"
+	WRITE-HOST ""
 
-	$FILENAME = "$PROJECT_NAME-$OS-$ARCH"
-	IF ($OS -EQ "windows") {
-		$FILENAME = "$FILENAME.exe"
+	WRITE-HOST "Building project..."
+	FOREACH ($OS in $CONFIG.BUILD.Keys) {
+		FOREACH ($ARCH in $CONFIG.BUILD[$OS]) {
+			$FILENAME = "$( $CONFIG.PROJECT_NAME )-$OS-$ARCH"
+			IF ($OS -EQ "windows") {
+				$FILENAME = "$FILENAME.exe"
+			}
+			
+			WRITE-HOST "$FILENAME - " -NoNewline
+
+			$ENV:GOOS = $OS
+			$ENV:GOARCH = $ARCH
+			go build -gcflags=all="-l -B" -ldflags="-s -w" -trimpath -o="bin/$FILENAME"
+
+			WRITE-HOST "DONE"
+		}
 	}
-
-	$ENV:GOOS = $OS
-	$ENV:GOARCH = $ARCH
-	go build -gcflags=all="-l -B" -ldflags="-s -w" -trimpath -o="bin/$FILENAME"
-
-	ECHO "$FILENAME ... DONE"
 }
 
 
 
-$PROJECT_NAME = "mcods"
-
-BUILD "linux" "386"
-BUILD "linux" "amd64"
-
-BUILD "windows" "386"
-BUILD "windows" "amd64"
+BUILD @{
+	PROJECT_NAME = "mcods"
+	BUILD = @{
+		"windows" = @("amd64", "386")
+		"linux" = @("amd64", "386")
+	}
+}
