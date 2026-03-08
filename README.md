@@ -1,13 +1,13 @@
 # MCods
-### Share your Minecraft server mod files (.jar) simply!
-Still in development, there may be bugs.
+### Easily share your Minecraft server mod files (.jar)!
+Still in development. There may be bugs.
 
 
 
 # Installation
 1. [Download from the latest release](https://github.com/JadeMin/MCods/releases/latest).
-2. Put it in the same folder as your Minecraft server.
-3. Edit the `run` file (which is the server launcher).
+2. Place it in your Minecraft server's root directory.
+3. Edit the `run` file (the server startup script).
 
 ## Linux
 4. Add a new line `./mcods` after the `java` command like:
@@ -46,8 +46,8 @@ start ./mcods
 
 # Usage
 1. Launch the `run` file.
-2. Share `http://<Your Minecraft server IP>:3000` to your friends.
-3. Let them click the `.jar` files to download.
+2. Share `http://<Your Minecraft server IP>:3000` with your friends.
+3. Have them click the `.jar` files to download.
 
 <!--
 ## If the `mods` folder has a different name or path
